@@ -5,7 +5,7 @@ A clean **static** HTML/CSS portfolio showing projects, experience, and contact 
 ## Live Demo
 
 - Live site: https://juancruz.netlify.app/
-- Hosted with GitHub Pages as a static site. 
+- Hosted with Netlify as a static site. 
 
 ## Features
 

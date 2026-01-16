@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comic — Juan Cruz</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background: linear-gradient(#2b2b2b, #0f0f0f);
+        color: #eee;
+        min-height: 100vh;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 52px;
+        background: linear-gradient(#3a0000, #120000);
+        border-bottom: 1px solid #000;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+          0 2px 6px rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+      }
+
+      nav .nav-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+      }
+
+      nav .title {
+        font-weight: bold;
+        font-size: 18px;
+        color: #ffb3b3;
+        text-shadow: 0 1px 0 #000;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+      }
+
+      nav ul li a {
+        padding: 6px 14px;
+        font-size: 14px;
+        text-decoration: none;
+        color: #f5f5f5;
+        background: linear-gradient(#7a0000, #3d0000);
+        border: 1px solid #000;
+        border-radius: 6px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25),
+          0 1px 0 rgba(0, 0, 0, 0.8);
+      }
+
+      nav ul li a:hover {
+        background: linear-gradient(#a30000, #520000);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 90px auto 60px;
+        padding: 0 16px;
+      }
+
+      section {
+        margin-bottom: 30px;
+        background: linear-gradient(#1e1e1e, #0b0b0b);
+        border: 1px solid #000;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
+          0 6px 16px rgba(0, 0, 0, 0.9);
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #ff4d4d;
+        text-shadow: 0 1px 0 #000;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #ddd;
+        line-height: 1.6;
+      }
+
+      /* ===== Fall 2025 Title ===== */
+      .term-title {
+        display: inline-block;
+        padding: 10px 24px;
+        margin-bottom: 20px;
+        background: linear-gradient(#9b0000, #4a0000);
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 10px;
+        border: 1px solid #000;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25),
+          0 4px 10px rgba(0, 0, 0, 0.9);
+        text-shadow: 0 1px 0 #000;
+      }
+
+      .project {
+        display: flex;
+        gap: 16px;
+        margin-top: 16px;
+        background: linear-gradient(#2a0000, #0f0000);
+        border: 1px solid #000;
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+          0 4px 10px rgba(0, 0, 0, 0.9);
+      }
+
+      .project-image {
+        width: 1000px;
+        height: 1000px;
+        border-radius: 8px;
+        background: linear-gradient(#333, #111);
+        border: 1px solid #000;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .project-content h3 {
+        color: #ff8080;
+        font-size: 18px;
+        margin-bottom: 6px;
+      }
+
+      .project-content p {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .project-content a {
+        display: inline-block;
+        padding: 6px 14px;
+        font-size: 14px;
+        text-decoration: none;
+        color: #fff;
+        background: linear-gradient(#7a0000, #3d0000);
+        border: 1px solid #000;
+        border-radius: 6px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25),
+          0 1px 0 rgba(0, 0, 0, 0.8);
+      }
+
+      .project-content a:hover {
+        background: linear-gradient(#a30000, #520000);
+      }
+
+      footer {
+        text-align: center;
+        font-size: 13px;
+        color: #888;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-inner">
+        <div class="title">Juan Cruz</div>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./projects.html">HTH Projects</a></li>
+          <li><a href="./software.html">Software Projects</a></li>
+          <li><a href="./contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <section>
+        <h1>Comic</h1>
+      </section>
+
+      <section>
+        <div class="project">
+          <div class="project-image">
+            <img src="./Images/Humanities/Comic1.jpg" alt="Comic" />
+          </div>
+          <div class="project-content"></div>
+        </div>
+        <div class="project">
+          <div class="project-image">
+            <img src="./Images/Humanities/Comic2.jpg" alt="Comic" />
+          </div>
+          <div class="project-content"></div>
+        </div>
+        <div class="project">
+          <div class="project-image">
+            <img src="./Images/Humanities/Comic3.jpg" alt="Comic" />
+          </div>
+          <div class="project-content"></div>
+        </div>
+      </section>
+
+      <footer>© 2026 Juan Cruz — Digital Portfolio</footer>
+    </div>
+  </body>
+</html>

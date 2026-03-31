@@ -1,15 +1,15 @@
 # Juan Cruz — Digital Portfolio
 
-A clean **static** HTML/CSS portfolio showing projects, experience, and contact information.
+A clean **static** HTML/CSS portfolio with projects, experiences, and contact information.
 
 ## Live Demo
 
 - Live site: https://juancruz85.github.io/digital-portfoilio/
-- Hosted with Github Pages as a static site. 
+- Hosted with Github Pages.
 
 ## Features
 
-- Responsive layout for desktop, and mobile.
+- Skeumorphic Design Elements
 - Sections for About, Projects, Skills, and Contact.
 
 ## Getting Started

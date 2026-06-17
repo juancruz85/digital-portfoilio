@@ -137,6 +137,42 @@
         display: block;
       }
 
+      .hobbies-gallery {
+        display: flex;
+        gap: 16px;
+        margin-top: 16px;
+        align-items: stretch;
+      }
+
+      .hobbies-left {
+        flex: 1;
+      }
+
+      .hobbies-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .tall-image {
+        min-height: 420px;
+      }
+
+      .stack-image {
+        height: 200px !important;
+      }
+
+      @media (max-width: 768px) {
+        .hobbies-gallery {
+          flex-direction: column;
+        }
+
+        .tall-image {
+          min-height: 300px;
+        }
+      }
+
       footer {
         text-align: center;
         font-size: 13px;
@@ -194,42 +230,65 @@
       <section id="skills">
         <h2>Skills</h2>
         <p>
-          <strong>Programming Languages:</strong> C++, Python, HTML/CSS/JS, MATLAB<br />
-          <strong>Concepts:</strong> Debugging, Problem Solving, Communication,
-          Leadership, Presenting
+          <strong>Programming Languages:</strong> C++, Python, HTML/CSS/JS,
+          MATLAB<br />
+          <strong>Concepts:</strong> Debugging, Problem Solving,
+          Communication, Leadership, Presenting
         </p>
       </section>
 
       <section id="robotics">
         <h2>Hobbies/Interests</h2>
+
         <p>
-          Computer Programming - I personally have always had a fascination with technology. 
-          Eventually this led me down a path of wanting to learn how to program. I usually do a 
-          variety of projects that I think are interesting and would increase my knowledge. All of which 
-          can be found on my GitHub. (Check out my contact page for my GitHub)
-          
-          FIRST Robotics - Starting in my freshman year in high school I found myself pretty lost on which extra curricular I should do. 
-          I decided to join my schools robotics team. As of the date of last updating my page I have completed one full season with them. 
-          
-          Legacy iOS Devices - A more seemingly random hobby I have is using Legacy iOS Devices. 
-          I have always loved the old skeumorphic design that is often found on the operating
-          systems of these devices. So much so that this websites design takes inspiration from that era.
+          Computer Programming - I personally have always had a fascination
+          with technology. Eventually this led me down a path of wanting to
+          learn how to program. I usually do a variety of projects that I think
+          are interesting and would increase my knowledge. All of which can be
+          found on my GitHub. (Check out my contact page for my GitHub)
+
+          <br /><br />
+
+          FIRST Robotics - Starting in my freshman year in high school I found
+          myself pretty lost on which extra curricular I should do. I decided
+          to join my schools robotics team. As of the date of last updating my
+          page I have completed one full season with them.
+
+          <br /><br />
+
+          Legacy iOS Devices - A more seemingly random hobby I have is using
+          Legacy iOS Devices. I have always loved the old skeuomorphic design
+          that is often found on the operating systems of these devices. So
+          much so that this website's design takes inspiration from that era.
         </p>
 
-        <div class="projects" style="margin-top: 16px">
-          <div class="project-card">
-            <img src="./Images/Hobbies/robotics_me.jpg" alt="Me in robotics attire" />
+        <div class="hobbies-gallery">
+          <div class="hobbies-left">
+            <div class="project-card">
+              <img
+                class="tall-image"
+                src="./Images/Hobbies/robotics_me.jpg"
+                alt="Me in robotics attire"
+              />
+            </div>
           </div>
 
-          <div class="project-card">
-            <img
-              src="./Images/Hobbies/iPhone4.jpg"
-              alt="Legacy iOS Device specifically an iPhone 4 running iOS 5.1.1"
-            />
-          </div>
+          <div class="hobbies-right">
+            <div class="project-card">
+              <img
+                class="stack-image"
+                src="./Images/Hobbies/iPhone4.jpg"
+                alt="Legacy iOS Device specifically an iPhone 4 running iOS 5.1.1"
+              />
+            </div>
 
-          <div class="project-card">
-            <img src="./Images/Software/pythondev.png" alt="Python Code" />
+            <div class="project-card">
+              <img
+                class="stack-image"
+                src="./Images/Software/pythondev.png"
+                alt="Python Code"
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -28,7 +28,8 @@
         height: 52px;
         background: linear-gradient(#3a0000, #120000);
         border-bottom: 1px solid #000;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.15),
           0 2px 6px rgba(0, 0, 0, 0.8);
         z-index: 1000;
       }
@@ -65,7 +66,8 @@
         background: linear-gradient(#7a0000, #3d0000);
         border: 1px solid #000;
         border-radius: 6px;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25),
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.25),
           0 1px 0 rgba(0, 0, 0, 0.8);
       }
 
@@ -85,7 +87,8 @@
         border: 1px solid #000;
         border-radius: 12px;
         padding: 20px;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.08),
           0 6px 16px rgba(0, 0, 0, 0.9);
       }
 
@@ -100,6 +103,12 @@
         font-size: 15px;
         line-height: 1.6;
         color: #ddd;
+      }
+
+      .hero {
+        display: flex;
+        gap: 20px;
+        align-items: center;
       }
 
       .hero h1 {
@@ -124,7 +133,8 @@
         border: 1px solid #000;
         border-radius: 10px;
         padding: 14px;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.15),
           0 4px 10px rgba(0, 0, 0, 0.9);
       }
 
@@ -164,12 +174,53 @@
       }
 
       @media (max-width: 768px) {
+        nav {
+          height: auto;
+          padding: 10px 0;
+        }
+
+        nav .nav-inner {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        nav ul {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .container {
+          margin-top: 150px;
+        }
+
+        .hero {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .hero h1 {
+          font-size: 26px;
+        }
+
+        section {
+          padding: 16px;
+        }
+
+        section h2 {
+          font-size: 20px;
+        }
+
+        section p {
+          font-size: 14px;
+        }
+
         .hobbies-gallery {
           flex-direction: column;
         }
 
-        .tall-image {
-          height: 300px;
+        .tall-image,
+        .stack-image {
+          height: 250px;
         }
       }
 
@@ -195,11 +246,7 @@
     </nav>
 
     <div class="container">
-      <section
-        class="hero"
-        id="about"
-        style="display: flex; gap: 20px; align-items: center"
-      >
+      <section class="hero" id="about">
         <div style="flex: 1">
           <h1>Juan Cruz</h1>
           <p class="subtitle">High School Student • Aspiring Developer</p>
@@ -218,7 +265,8 @@
             border-radius: 12px;
             background: linear-gradient(#333, #111);
             border: 1px solid #000;
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+            box-shadow:
+              inset 0 1px 0 rgba(255, 255, 255, 0.15),
               0 4px 10px rgba(0, 0, 0, 0.9);
             overflow: hidden;
           "
@@ -232,8 +280,8 @@
         <p>
           <strong>Programming Languages:</strong> C++, Python, HTML/CSS/JS,
           MATLAB<br />
-          <strong>Concepts:</strong> Debugging, Problem Solving,
-          Communication, Leadership, Presenting
+          <strong>Concepts:</strong> Debugging, Problem Solving, Communication,
+          Leadership, Presenting
         </p>
       </section>
 
@@ -241,25 +289,25 @@
         <h2>Hobbies/Interests</h2>
 
         <p>
-          Computer Programming - I personally have always had a fascination
-          with technology. Eventually this led me down a path of wanting to
-          learn how to program. I usually do a variety of projects that I think
-          are interesting and would increase my knowledge. All of which can be
-          found on my GitHub. (Check out my contact page for my GitHub)
+          Computer Programming - I personally have always had a fascination with
+          technology. Eventually this led me down a path of wanting to learn how
+          to program. I usually do a variety of projects that I think are
+          interesting and would increase my knowledge. All of which can be found
+          on my GitHub. (Check out my contact page for my GitHub)
 
           <br /><br />
 
           FIRST Robotics - Starting in my freshman year in high school I found
-          myself pretty lost on which extra curricular I should do. I decided
-          to join my schools robotics team. As of the date of last updating my
-          page I have completed one full season with them.
+          myself pretty lost on which extra curricular I should do. I decided to
+          join my schools robotics team. As of the date of last updating my page
+          I have completed one full season with them.
 
           <br /><br />
 
           Legacy iOS Devices - A more seemingly random hobby I have is using
           Legacy iOS Devices. I have always loved the old skeuomorphic design
-          that is often found on the operating systems of these devices. So
-          much so that this website's design takes inspiration from that era.
+          that is often found on the operating systems of these devices. So much
+          so that this website's design takes inspiration from that era.
         </p>
 
         <div class="hobbies-gallery">

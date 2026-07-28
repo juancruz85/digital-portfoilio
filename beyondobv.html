@@ -21,7 +21,7 @@
       }
 
       nav {
-        position: fixed;
+        position: sticky;
         top: 0;
         left: 0;
         width: 100%;
@@ -74,7 +74,7 @@
 
       .container {
         max-width: 1100px;
-        margin: 90px auto 60px;
+        margin: 24px auto 60px;
         padding: 0 16px;
       }
 
@@ -100,7 +100,6 @@
         line-height: 1.6;
       }
 
-      /* ===== Fall 2025 Title ===== */
       .term-title {
         display: inline-block;
         padding: 10px 24px;
@@ -177,6 +176,40 @@
         font-size: 13px;
         color: #888;
         margin-top: 40px;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          height: auto;
+          padding: 10px 0;
+        }
+
+        nav .nav-inner {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        nav ul {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        section {
+          padding: 16px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+
+        .project {
+          flex-direction: column;
+        }
+
+        .project-image {
+          width: 100%;
+          height: 200px;
+        }
       }
     </style>
   </head>

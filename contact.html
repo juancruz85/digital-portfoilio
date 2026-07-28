@@ -21,7 +21,7 @@
       }
 
       nav {
-        position: fixed;
+        position: sticky;
         top: 0;
         left: 0;
         width: 100%;
@@ -74,7 +74,7 @@
 
       .container {
         max-width: 800px;
-        margin: 90px auto 60px;
+        margin: 24px auto 60px;
         padding: 0 16px;
       }
 
@@ -100,7 +100,6 @@
         line-height: 1.6;
       }
 
-      /* ===== Form ===== */
       form {
         display: flex;
         flex-direction: column;
@@ -115,7 +114,7 @@
         padding: 12px;
         border-radius: 8px;
         color: #fff;
-        font-size: 15px;
+        font-size: 16px;
       }
 
       textarea {
@@ -160,6 +159,35 @@
         font-size: 13px;
         color: #888;
         margin-top: 40px;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          height: auto;
+          padding: 10px 0;
+        }
+
+        nav .nav-inner {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        nav ul {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        section {
+          padding: 16px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+
+        iframe {
+          height: 240px;
+        }
       }
     </style>
   </head>

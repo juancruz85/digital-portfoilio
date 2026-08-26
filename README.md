@@ -4,5 +4,5 @@ A **static** HTML/CSS portfolio with projects, experiences, and contact informat
 
 ## Live Page
 
-- Live site: https://juancruz85.github.io/digital-portfoilio/
+- Live site: https://cruzantonio.net
 - Hosted with Github Pages.

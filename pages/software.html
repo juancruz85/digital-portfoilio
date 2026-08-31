@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Comic — Juan Cruz</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <title>Software Projects — Juan Cruz</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
     <style>
@@ -100,21 +104,6 @@
         line-height: 1.6;
       }
 
-      .term-title {
-        display: inline-block;
-        padding: 10px 24px;
-        margin-bottom: 20px;
-        background: linear-gradient(#9b0000, #4a0000);
-        color: #fff;
-        font-weight: bold;
-        font-size: 20px;
-        border-radius: 10px;
-        border: 1px solid #000;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25),
-          0 4px 10px rgba(0, 0, 0, 0.9);
-        text-shadow: 0 1px 0 #000;
-      }
-
       .project {
         display: flex;
         gap: 16px;
@@ -128,17 +117,19 @@
       }
 
       .project-image {
-        width: 100%;
+        width: 140px;
+        height: 100px;
         border-radius: 8px;
         background: linear-gradient(#333, #111);
         border: 1px solid #000;
         overflow: hidden;
+        flex-shrink: 0;
       }
 
       .project-image img {
         width: 100%;
-        height: auto;
-        display: block;
+        height: 100%;
+        object-fit: cover;
       }
 
       .project-content h3 {
@@ -203,6 +194,11 @@
         .project {
           flex-direction: column;
         }
+
+        .project-image {
+          width: 100%;
+          height: 200px;
+        }
       }
     </style>
   </head>
@@ -212,9 +208,8 @@
       <div class="nav-inner">
         <div class="title">Juan Cruz</div>
         <ul>
-          <li><a href="./index.html">Home</a></li>
+          <li><a href="../index.html">Home</a></li>
           <li><a href="./projects.html">HTH Projects</a></li>
-          <li><a href="./software.html">Software Projects</a></li>
           <li><a href="./contact.html">Contact Me</a></li>
         </ul>
       </div>
@@ -222,27 +217,53 @@
 
     <div class="container">
       <section>
-        <h1>Comic</h1>
+        <h1>Software Projects</h1>
+        <p>
+          A collection of some of my best software projects to date. Convering
+          each language I have experience with and what I am personally proud
+          of. I hope you enjoy!
+        </p>
       </section>
 
       <section>
         <div class="project">
           <div class="project-image">
-            <img src="./Images/Humanities/Comic1.jpg" alt="Comic" />
+            <img
+              src="../assets/images/freshman/software/matlab.png"
+              alt="Linear Equation Solver in MATLAB"
+            />
           </div>
-          <div class="project-content"></div>
+          <div class="project-content">
+            <h3>Linear MATLAB Solver</h3>
+            <p>
+              My first project ever in MATLAB. This simple program was made to
+              simply find x in a linear equation. For example 8x + 2 = 2x + 4
+              would be an example of that. I plan to keep improving my MATLAB
+              skills and to create more MATLAB projects.
+            </p>
+            <a href="https://github.com/juancruz85/linear-matlab-solver"
+              >View Repository</a
+            >
+          </div>
         </div>
+
         <div class="project">
           <div class="project-image">
-            <img src="./Images/Humanities/Comic2.jpg" alt="Comic" />
+            <img
+              src="../assets/images/freshman/software/clicker.png"
+              alt="Number Game in Python"
+            />
           </div>
-          <div class="project-content"></div>
+          <div class="project-content">
+            <h3>Python Number Game</h3>
+            <p>
+              One of the first projects I ever tried related to software/programming. Its not a big project nor is it flashy but it is the first. Hope you maybe have fun with it. 
+            </p>
+            <a href="https://github.com/juancruz85/numberguesser"
+              >View Repository</a
+            >
+          </div>
         </div>
-        <div class="project">
-          <div class="project-image">
-            <img src="./Images/Humanities/Comic3.jpg" alt="Comic" />
-          </div>
-          <div class="project-content"></div>
         </div>
       </section>
 

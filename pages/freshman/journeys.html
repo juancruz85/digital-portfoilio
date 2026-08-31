@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <title>Journeys Through Time — Juan Cruz</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background: linear-gradient(#2b2b2b, #0f0f0f);
+        color: #eee;
+        min-height: 100vh;
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 52px;
+        background: linear-gradient(#3a0000, #120000);
+        border-bottom: 1px solid #000;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+          0 2px 6px rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+      }
+
+      nav .nav-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+      }
+
+      nav .title {
+        font-weight: bold;
+        font-size: 18px;
+        color: #ffb3b3;
+        text-shadow: 0 1px 0 #000;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+      }
+
+      nav ul li a {
+        padding: 6px 14px;
+        font-size: 14px;
+        text-decoration: none;
+        color: #f5f5f5;
+        background: linear-gradient(#7a0000, #3d0000);
+        border: 1px solid #000;
+        border-radius: 6px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25),
+          0 1px 0 rgba(0, 0, 0, 0.8);
+      }
+
+      nav ul li a:hover {
+        background: linear-gradient(#a30000, #520000);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 24px auto 60px;
+        padding: 0 16px;
+      }
+
+      section {
+        margin-bottom: 30px;
+        background: linear-gradient(#1e1e1e, #0b0b0b);
+        border: 1px solid #000;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
+          0 6px 16px rgba(0, 0, 0, 0.9);
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #ff4d4d;
+        text-shadow: 0 1px 0 #000;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #ddd;
+        line-height: 1.6;
+      }
+
+      .term-title {
+        display: inline-block;
+        padding: 10px 24px;
+        margin-bottom: 20px;
+        background: linear-gradient(#9b0000, #4a0000);
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 10px;
+        border: 1px solid #000;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25),
+          0 4px 10px rgba(0, 0, 0, 0.9);
+        text-shadow: 0 1px 0 #000;
+      }
+
+      .project {
+        display: flex;
+        gap: 16px;
+        margin-top: 16px;
+        background: linear-gradient(#2a0000, #0f0000);
+        border: 1px solid #000;
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+          0 4px 10px rgba(0, 0, 0, 0.9);
+      }
+
+      .project-image {
+        width: 140px;
+        height: 100px;
+        border-radius: 8px;
+        background: linear-gradient(#333, #111);
+        border: 1px solid #000;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .project-content h3 {
+        color: #ff8080;
+        font-size: 18px;
+        margin-bottom: 6px;
+      }
+
+      .project-content p {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .project-content a {
+        display: inline-block;
+        padding: 6px 14px;
+        font-size: 14px;
+        text-decoration: none;
+        color: #fff;
+        background: linear-gradient(#7a0000, #3d0000);
+        border: 1px solid #000;
+        border-radius: 6px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25),
+          0 1px 0 rgba(0, 0, 0, 0.8);
+      }
+
+      .project-content a:hover {
+        background: linear-gradient(#a30000, #520000);
+      }
+
+      footer {
+        text-align: center;
+        font-size: 13px;
+        color: #888;
+        margin-top: 40px;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          height: auto;
+          padding: 10px 0;
+        }
+
+        nav .nav-inner {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        nav ul {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        section {
+          padding: 16px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+
+        .project {
+          flex-direction: column;
+        }
+
+        .project-image {
+          width: 100%;
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-inner">
+        <div class="title">Juan Cruz</div>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../projects.html">HTH Projects</a></li>
+          <li><a href="../software.html">Software Projects</a></li>
+          <li><a href="../contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <section>
+        <h1>Journeys Through Time</h1>
+      </section>
+
+      <section>
+        <div class="project">
+          <div class="project-image">
+            <img
+              src="../../assets/images/freshman/humanities/poem.png"
+              alt="Poetry"
+            />
+          </div>
+          <div class="project-content">
+            <h3>
+              <a href="../../assets/docs/poetry_pdf.pdf">Poems</a>
+            </h3>
+            <p>
+              In this project we were tasked to explore different types of poetry. We originally started 
+              by reading mentor texts of each type of poem before we made one of every kind. Once we had our drafts we chose 
+              two that would be our final. The two final poems I chose was an Ode and an advice poem. 
+            </p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-image">
+            <img src="../../assets/images/freshman/humanities/blog_posts.png" alt="Blog Posts" />
+          </div>
+          <div class="project-content">
+            <h3>
+              <a
+                href="https://sites.google.com/hightechhigh.org/journeys-through-time-blogs/home"
+                >Blog Posts</a
+              >
+            </h3>
+            <p>
+             This project is a telling of our experiences throughout the 2nd semester. Our experience of
+             pushing ourselves to the limit physically and mentally told in descriptive writing. Each blog post 
+             was capped to 800 words and on this website they are sepereated by each journey we took. You can
+             also find a direct link to all five of mine on that website.
+            </p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-image">
+            <img src="../../assets/images/freshman/humanities/post_card.png" alt="Postcards" />
+          </div>
+          <div class="project-content">
+            <h3><a href="../../assets/images/freshman/humanities/post_card.png">Postcards</a></h3>
+            <p>
+              This project relates to the first ever journey we did. We went on a hike
+              and had to identify a plant native to San Diego. Once they had a plant chosen they went 
+              ahead and researched the plant as well as what uses the Kumeyaay who are the native San Diegans used it for
+              in the past.
+            </p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-image">
+            <img src="../../assets/images/freshman/physics/boat_img.png" alt="Boats" />
+          </div>
+          <div class="project-content">
+            <h3><a href="../../assets/images/freshman/physics/boat_img.png">Boats</a></h3>
+            <p>
+              In this project we were tasked to construct a boat out of cardboard.
+              Then challenged to make it cross a small water way. We were given about a total of
+              4 weeks to design and build our boat. For me it was 3 weeks because I had to miss one
+              week to go pursue an oppurtunity. 
+            </p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-image">
+            <img
+              src="../../assets/images/freshman/physics/ropes_course.png"
+              alt="Model Ropescourse"
+            />
+          </div>
+          <div class="project-content">
+            <h3>
+              <a href="https://docs.google.com/presentation/d/1aTSxzBBQ8Auf65d9dcnRT-yMRiEy7URD7ick8u9alyM/edit?usp=sharing"
+                >Ropes Course Model</a
+              >
+            </h3>
+            <p>
+              In this project students were tasked to scale down an object that was on the ropes course they went to.
+              They had to create a 1:50 scale model of a section of the orange county ropes course. Paired with the model
+              was also a small descriptive writing portion, detailing the immense fear felt while high above. To read the 
+              short paragraph click on the button above!
+            </p>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-image">
+            <img src="../../assets/images/freshman/math/hike_graph.png" alt="Hike Graphs" />
+          </div>
+          <div class="project-content">
+            <h3>
+              <a
+                href="https://docs.google.com/drawings/d/1mKHDw-87ij_huazx0MFHRFEgVJtETWBSuriA7-Vc_T0/edit?usp=sharing"
+                >Hike Graphs</a
+              >
+            </h3>
+            <p>
+             In this project students were tasked to gather data from a hike they went on. They had
+             to clean the data and learn how to display that in an effective way to tell the story of that journey.
+             They collected two types of data that being theiur walking speed and a variable of their choosing. I personally
+             chose to do measure my heart rate. The graphs were then displayed on top of each other with one graph being a 
+             transpoarent layer on top of the other one. 
+            </p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-image">
+            <img
+              src="../../assets/images/freshman/math/animation.png"
+              alt="Animation"
+            />
+          </div>
+          <div class="project-content">
+            <h3>
+              <a
+                href="https://www.khanacademy.org/computer-programming/juanred-first-draft-of-animation/6020769415282688"
+                >Animation</a
+              >
+            </h3>
+            <p>
+            In this project we were challenged to do something most people have never done. Make an animation in processingJS. 
+            This project was designed to challenge students to get out of their comfort zones. Computers are everywhere and at least being familar
+            with the bare basics of programming is often an over looked skill. 
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>© 2026 Juan Cruz — Digital Portfolio</footer>
+    </div>
+  </body>
+</html>

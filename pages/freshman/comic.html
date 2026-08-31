@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTH Projects — Juan Cruz</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <title>Comic — Juan Cruz</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
     <style>
@@ -101,8 +105,7 @@
       }
 
       .term-title {
-        display: block;
-        width: 100%;
+        display: inline-block;
         padding: 10px 24px;
         margin-bottom: 20px;
         background: linear-gradient(#9b0000, #4a0000);
@@ -114,7 +117,6 @@
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25),
           0 4px 10px rgba(0, 0, 0, 0.9);
         text-shadow: 0 1px 0 #000;
-        text-align: center;
       }
 
       .project {
@@ -130,19 +132,17 @@
       }
 
       .project-image {
-        width: 300px;
-        height: 190px;
+        width: 100%;
         border-radius: 8px;
         background: linear-gradient(#333, #111);
         border: 1px solid #000;
         overflow: hidden;
-        flex-shrink: 0;
       }
 
       .project-image img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: auto;
+        display: block;
       }
 
       .project-content h3 {
@@ -204,18 +204,8 @@
           font-size: 24px;
         }
 
-        .term-title {
-          font-size: 17px;
-          padding: 8px 16px;
-        }
-
         .project {
           flex-direction: column;
-        }
-
-        .project-image {
-          width: 100%;
-          height: 200px;
         }
       }
     </style>
@@ -226,69 +216,37 @@
       <div class="nav-inner">
         <div class="title">Juan Cruz</div>
         <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./software.html">Software Projects</a></li>
-          <li><a href="./contact.html">Contact Me</a></li>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../projects.html">HTH Projects</a></li>
+          <li><a href="../software.html">Software Projects</a></li>
+          <li><a href="../contact.html">Contact Me</a></li>
         </ul>
       </div>
     </nav>
 
     <div class="container">
       <section>
-        <h1>High Tech High Projects</h1>
-        <p>
-          A collection of projects I’ve worked on during my time at High Tech
-          High School in San Diego, CA
-        </p>
+        <h1>Comic</h1>
       </section>
-
-      <div class="term-title">Fall 2025</div>
 
       <section>
         <div class="project">
           <div class="project-image">
-            <img
-              src="./Images/Physics/pmmm.JPG"
-              alt="Perpetual Motion Machine"
-            />
+            <img src="../../assets/images/freshman/humanities/comic1.jpg" alt="Comic" />
           </div>
-          <div class="project-content">
-            <h3>Beyond the Obvious</h3>
-            <p>
-              Humans think they know everything. Well can they prove it? I had
-              to prove that things people consider as facts were actually true.
-              I did this by attacking the understanding of our reality with
-              multiple challenges. Conceptions about people, Earth, dark matter,
-              and much more. All colliding into one amazing project that will
-              make YOU question everything.
-            </p>
-            <p>You should go beyond...</p>
-            <a href="./beyondobv.html">Go Beyond</a>
-          </div>
+          <div class="project-content"></div>
         </div>
-      </section>
-      
-      <div class="term-title">Spring 2026</div>
-      
-      <section>
         <div class="project">
           <div class="project-image">
-            <img
-              src="./Images/Physics/boat_img.png"
-              alt="Cardboard Boat"
-            />
+            <img src="../../assets/images/freshman/humanities/comic2.jpg" alt="Comic" />
           </div>
-          <div class="project-content">
-            <h3>Journeys Through Time</h3>
-            <p>
-              People evolve. That is a simple fact of life. In this project students were tasked to 
-              go through several field trips, testing their physical and mental strength. Getting them
-              out of their comfort zone. All culminating in them curating different ways to tell their 
-              story that will definitely pique your interest.
-            </p>
-            <p>You should probably go on a journey...</p>
-            <a href="./journeys.html">Go Adventure</a>
+          <div class="project-content"></div>
+        </div>
+        <div class="project">
+          <div class="project-image">
+            <img src="../../assets/images/freshman/humanities/comic3.jpg" alt="Comic" />
           </div>
+          <div class="project-content"></div>
         </div>
       </section>
 

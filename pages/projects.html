@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Journeys Through Time — Juan Cruz</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <title>HTH Projects — Juan Cruz</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
     <style>
@@ -101,7 +105,8 @@
       }
 
       .term-title {
-        display: inline-block;
+        display: block;
+        width: 100%;
         padding: 10px 24px;
         margin-bottom: 20px;
         background: linear-gradient(#9b0000, #4a0000);
@@ -113,6 +118,7 @@
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25),
           0 4px 10px rgba(0, 0, 0, 0.9);
         text-shadow: 0 1px 0 #000;
+        text-align: center;
       }
 
       .project {
@@ -128,8 +134,8 @@
       }
 
       .project-image {
-        width: 140px;
-        height: 100px;
+        width: 300px;
+        height: 190px;
         border-radius: 8px;
         background: linear-gradient(#333, #111);
         border: 1px solid #000;
@@ -202,6 +208,11 @@
           font-size: 24px;
         }
 
+        .term-title {
+          font-size: 17px;
+          padding: 8px 16px;
+        }
+
         .project {
           flex-direction: column;
         }
@@ -219,8 +230,7 @@
       <div class="nav-inner">
         <div class="title">Juan Cruz</div>
         <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./projects.html">HTH Projects</a></li>
+          <li><a href="../index.html">Home</a></li>
           <li><a href="./software.html">Software Projects</a></li>
           <li><a href="./contact.html">Contact Me</a></li>
         </ul>
@@ -229,136 +239,59 @@
 
     <div class="container">
       <section>
-        <h1>Journeys Through Time</h1>
+        <h1>High Tech High Projects</h1>
+        <p>
+          A collection of projects I’ve worked on during my time at High Tech
+          High School in San Diego, CA
+        </p>
       </section>
+
+      <div class="term-title">Fall 2025</div>
 
       <section>
         <div class="project">
           <div class="project-image">
             <img
-              src="Images/Humanities/poem.png"
-              alt="Poetry"
+              src="../assets/images/freshman/physics/pmmm.jpg"
+              alt="Perpetual Motion Machine"
             />
           </div>
           <div class="project-content">
-            <h3>
-              <a href="Images/Humanities/poetry_pdf.pdf">Poems</a>
-            </h3>
+            <h3>Beyond the Obvious</h3>
             <p>
-              In this project we were tasked to explore different types of poetry. We originally started 
-              by reading mentor texts of each type of poem before we made one of every kind. Once we had our drafts we chose 
-              two that would be our final. The two final poems I chose was an Ode and an advice poem. 
+              Humans think they know everything. Well can they prove it? I had
+              to prove that things people consider as facts were actually true.
+              I did this by attacking the understanding of our reality with
+              multiple challenges. Conceptions about people, Earth, dark matter,
+              and much more. All colliding into one amazing project that will
+              make YOU question everything.
             </p>
+            <p>You should go beyond...</p>
+            <a href="./freshman/beyondobv.html">Go Beyond</a>
           </div>
         </div>
-        <div class="project">
-          <div class="project-image">
-            <img src="Images/Humanities/blog_posts.png" alt="Blog Posts" />
-          </div>
-          <div class="project-content">
-            <h3>
-              <a
-                href="https://sites.google.com/hightechhigh.org/journeys-through-time-blogs/home"
-                >Blog Posts</a
-              >
-            </h3>
-            <p>
-             This project is a telling of our experiences throughout the 2nd semester. Our experience of
-             pushing ourselves to the limit physically and mentally told in descriptive writing. Each blog post 
-             was capped to 800 words and on this website they are sepereated by each journey we took. You can
-             also find a direct link to all five of mine on that website.
-            </p>
-          </div>
-        </div>
-        <div class="project">
-          <div class="project-image">
-            <img src="Images/Humanities/post_card.png" alt="Postcards" />
-          </div>
-          <div class="project-content">
-            <h3><a href="Images/Humanities/post_card.png">Postcards</a></h3>
-            <p>
-              This project relates to the first ever journey we did. We went on a hike
-              and had to identify a plant native to San Diego. Once they had a plant chosen they went 
-              ahead and researched the plant as well as what uses the Kumeyaay who are the native San Diegans used it for
-              in the past.
-            </p>
-          </div>
-        </div>
-        <div class="project">
-          <div class="project-image">
-            <img src="Images/Physics/boat_img.png" alt="Boats" />
-          </div>
-          <div class="project-content">
-            <h3><a href="Images/Physics/boat_img.png">Boats</a></h3>
-            <p>
-              In this project we were tasked to construct a boat out of cardboard.
-              Then challenged to make it cross a small water way. We were given about a total of
-              4 weeks to design and build our boat. For me it was 3 weeks because I had to miss one
-              week to go pursue an oppurtunity. 
-            </p>
-          </div>
-        </div>
+      </section>
+      
+      <div class="term-title">Spring 2026</div>
+      
+      <section>
         <div class="project">
           <div class="project-image">
             <img
-              src="Images/Physics/ropes_course.png"
-              alt="Model Ropescourse"
+              src="../assets/images/freshman/physics/boat_img.png"
+              alt="Cardboard Boat"
             />
           </div>
           <div class="project-content">
-            <h3>
-              <a href="https://docs.google.com/presentation/d/1aTSxzBBQ8Auf65d9dcnRT-yMRiEy7URD7ick8u9alyM/edit?usp=sharing"
-                >Ropes Course Model</a
-              >
-            </h3>
+            <h3>Journeys Through Time</h3>
             <p>
-              In this project students were tasked to scale down an object that was on the ropes course they went to.
-              They had to create a 1:50 scale model of a section of the orange county ropes course. Paired with the model
-              was also a small descriptive writing portion, detailing the immense fear felt while high above. To read the 
-              short paragraph click on the button above!
+              People evolve. That is a simple fact of life. In this project students were tasked to 
+              go through several field trips, testing their physical and mental strength. Getting them
+              out of their comfort zone. All culminating in them curating different ways to tell their 
+              story that will definitely pique your interest.
             </p>
-          </div>
-        </div>
-
-        <div class="project">
-          <div class="project-image">
-            <img src="Images/Math/hike_graph.png" alt="Hike Graphs" />
-          </div>
-          <div class="project-content">
-            <h3>
-              <a
-                href="https://docs.google.com/drawings/d/1mKHDw-87ij_huazx0MFHRFEgVJtETWBSuriA7-Vc_T0/edit?usp=sharing"
-                >Hike Graphs</a
-              >
-            </h3>
-            <p>
-             In this project students were tasked to gather data from a hike they went on. They had
-             to clean the data and learn how to display that in an effective way to tell the story of that journey.
-             They collected two types of data that being theiur walking speed and a variable of their choosing. I personally
-             chose to do measure my heart rate. The graphs were then displayed on top of each other with one graph being a 
-             transpoarent layer on top of the other one. 
-            </p>
-          </div>
-        </div>
-        <div class="project">
-          <div class="project-image">
-            <img
-              src="Images/Math/animation.png"
-              alt="Animation"
-            />
-          </div>
-          <div class="project-content">
-            <h3>
-              <a
-                href="https://www.khanacademy.org/computer-programming/juanred-first-draft-of-animation/6020769415282688"
-                >Animation</a
-              >
-            </h3>
-            <p>
-            In this project we were challenged to do something most people have never done. Make an animation in processingJS. 
-            This project was designed to challenge students to get out of their comfort zones. Computers are everywhere and at least being familar
-            with the bare basics of programming is often an over looked skill. 
-            </p>
+            <p>You should probably go on a journey...</p>
+            <a href="./freshman/journeys.html">Go Adventure</a>
           </div>
         </div>
       </section>

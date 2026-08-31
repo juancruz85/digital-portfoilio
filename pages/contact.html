@@ -224,7 +224,21 @@
           action="https://formsubmit.co/96874db90dba49a4161acf06b09014e0"
           method="POST"
         >
-          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_captcha" value="true" />
+          <input
+            type="hidden"
+            name="_blacklist"
+            value="seo services, backlink, link building, guest post, buy followers, cryptocurrency, bitcoin, forex, casino, viagra, cialis, payday loan, escort, porn, rank your website, increase your traffic, we noticed your website, dear webmaster"
+          />
+          <!-- Honeypot: invisible to people; bots that fill it are dropped -->
+          <input
+            type="text"
+            name="_honey"
+            style="display: none"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+          />
           <input type="hidden" name="_template" value="box" />
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
